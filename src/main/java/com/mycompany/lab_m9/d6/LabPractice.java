@@ -6,15 +6,15 @@ public class LabPractice
     public static void main(String[] args) 
     {
         LabPractice LP = new LabPractice();
-        int numUser = 7;
-        System.out.println( numUser + " is " + (LP.isPrime(numUser)? "Prime": "Not Prime"));
+        int [] arr={3,7,11};
+        System.out.println("The sum of the numbers is " + LP.getPrimeSum(arr));
         
     }
-    public static boolean isPrime(int a)
+    public static int getPrimeSum(int[] nums)
     {
-        boolean prime = true;
-        for (int i = 2; i<a; i++)
-            if(a%i == 0) prime = false;
-        return prime;
+       int sum = 0;
+       for (int i = 0; i < nums.length; i++)
+       sum = sum + nums[i];
+       return sum;
     }
 }
